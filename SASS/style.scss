@@ -1,0 +1,135 @@
+@import 'reset';
+@import 'variables';
+
+.recipeCard_name, .recipeCard_subname{
+    font-family: 'Family Young';
+}
+
+*:not(.recipeCard_name, .recipeCard_subname){
+    font-family: 'Family Outfit';
+}
+
+body{
+    background-color: $neutral-eggshell;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 8vh auto;
+}
+
+@media screen and (max-width: 28.125rem){
+    body{
+        margin: 0;
+        background-color: $neutral-white;
+    }
+    .recipeCard{
+        border-radius: none;
+    }
+}
+
+@media screen and (max-height: 28.125rem){
+    body{
+        margin: 0;
+        background-color: $neutral-white;
+    }
+    .recipeCard{
+        border-radius: none;
+    }
+}
+.recipeCard{
+    background-color: $neutral-white;
+    min-width: $min-width;
+    max-width: $max-width;
+    padding: $card-padding;
+    border-radius: 1rem;
+}
+.recipeCard_image{
+    border-radius: 0.6rem;
+}
+.recipeCard_name{
+    font-weight: $weight-thin;
+    font-size: $size-h1;
+    color: $neutral-dark-Charcoal;
+    margin: $titles-tb-margin;
+}
+.recipeCard_subname{
+    font-weight: $weight-thin;
+    font-size: $size-h2;
+    color: $primary-nutmeg;
+}
+.recipeCard_subname:last-of-type{
+    margin-bottom: 1rem;
+}
+
+.recipeCard_text{
+    font-weight: $weight-thin;
+    font-size: $size-p;
+    color: $neutral-wenge-brown;
+    text-align: justify;
+}
+.recipeCard_disclaimer{
+    background-color: $neutral-rose-white;
+    padding: $card-padding-disclaimer;
+    border-radius: 0.6rem;
+    margin: $disclaimer-margin;
+}
+.recipeCard_disclaimer_name{
+    font-weight: $weight-big;
+    font-size: $size-disclaimer;
+    color: $primary-dark-rasp;   
+}
+.recipeCard_list{
+    font-size: $size-li;
+    color: $neutral-wenge-brown;
+    font-weight: $weight-thin;
+    list-style-position: outside;
+    padding: $list-padding;
+    margin: $list-margin;
+}
+.recipeCard_list_item{
+    padding: $list-padding;
+    &::marker{
+        color: $primary-nutmeg;
+        font-weight: $weight-big;
+    }
+}
+
+.recipeCard_disclaimer .recipeCard_list{
+    margin: 0;
+}
+
+.recipeCard_disclaimer .recipeCard_list .recipeCard_list_item::marker{
+    color: $primary-dark-rasp;
+}
+.recipeCard_table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin: $table-margin;
+    color: $neutral-wenge-brown;
+    font-weight: $weight-thin;
+}
+.recipeCard_table_row:not(:nth-child(4)){
+    border-bottom: 0.0625rem solid $neutral-light-grey;
+}
+.recipeCard_table_row_cell{
+    padding: $padding-table-cell;
+    font-size: $size-td;
+}
+.recipeCard_table_row_cell:nth-child(2){
+    color: $primary-nutmeg;
+    font-weight: $weight-med;
+}
+
+hr{
+    border: none;
+    background-color: $neutral-light-grey;
+    height: 0.0625rem;
+    margin: $hr-margin;
+}
+
+.attribution{
+    text-align: center;
+}
